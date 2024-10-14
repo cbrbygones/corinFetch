@@ -5,7 +5,6 @@ SYS_DISTRO_OS=$(uname -o)
 SYS_KERNEL=$(uname -s -r)
 SYS_CPU=$(grep -m 1 'model name' /proc/cpuinfo | sed 's/model name\s*:\s*//')
 SYS_CPU_MHZ=$(grep -m 1 'cpu MHz' /proc/cpuinfo | sed 's/cpu MHz\s*:\s*//')
-SYS_PARTS=$(cat /proc/partitions)
 
 echo " "
 
