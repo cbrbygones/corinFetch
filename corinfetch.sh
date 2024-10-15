@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 #    corinFetch  Copyright (C) 2024  https://github.com/cbrbygones
 #    This program comes with ABSOLUTELY NO WARRANTY; This is free software, 
 #    and you are welcome to redistribute it under certain conditions.
