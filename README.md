@@ -1,5 +1,6 @@
 # corinFetch
 A system information tool clone, taking the ideas of hyfetch (pride flags and customization) and the efficiency of screenfetch (quick and to the point like the original neofetch).<br>
+(Project currently lacks alot of these features, but can still produce sysinfo and distro specific ascii art).
 
 ## Installation
 Run the following commands...
