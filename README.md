@@ -1,6 +1,5 @@
 # corinFetch
-Another CLI system information tool??? But it's better!
-(Ideas/direction of hyfetch, but with the efficiency of screenfetch)
+A system information tool clone, taking the ideas of hyfetch (pride flags and customization) and the efficiency of screenfetch (quick and to the point like the original neofetch).<br>
 
 ## Installation
 Run the following commands...
