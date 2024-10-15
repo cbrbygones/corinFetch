@@ -1,10 +1,26 @@
+#    corinFetch  Copyright (C) 2024  https://github.com/cbrbygones
+#    This program comes with ABSOLUTELY NO WARRANTY; This is free software, 
+#    and you are welcome to redistribute it under certain conditions.
+#
+#    Please review the GNU General Public License v3.0:
+#    https://www.gnu.org/licenses/gpl-3.0.html
+
+# VARIABLES SECTION - PLEASE DO NOT EDIT UNLESS YOU KNOW WHAT YOU'RE DOING
+
 SYS_NAME=$(echo "$USER")
 SYS_HOSTNAME=$(uname -n)
 SYS_DISTRO=$(. /etc/os-release && echo "$ID")
 SYS_DISTRO_OS=$(uname -o)
+SYS_DIMMS=$(xdpyinfo | grep dimensions | sed 's/dimensions\s*:\s*\([0-9x]*\)\s*.*/\1/')
+SYS_DE=$(echo "$XDG_CURRENT_DESKTOP")
 SYS_KERNEL=$(uname -s -r)
 SYS_CPU=$(grep -m 1 'model name' /proc/cpuinfo | sed 's/model name\s*:\s*//')
 SYS_CPU_MHZ=$(grep -m 1 'cpu MHz' /proc/cpuinfo | sed 's/cpu MHz\s*:\s*//')
+SYS_PRCSSRS=$(grep -m 1 'cpu cores' /proc/cpuinfo | sed 's/cpu cores\s*:\s*//')
+SYS_MEMORY_FREE=$(grep -m 1 'MemFree' /proc/meminfo | sed 's/MemFree\s*:\s*//')
+SYS_MEMORY_AVAIL=$(grep -m 1 'MemAvailable' /proc/meminfo | sed 's/MemAvailable\s*:\s*//')
+
+# DO NOT EDIT PAST THIS LINE UNLESS YOU KNOW WHAT YOU'RE DOING
 
 echo " "
 
@@ -38,7 +54,11 @@ fi
 		
 echo " "
 echo "$SYS_NAME@$SYS_HOSTNAME"
-echo "Distribution: $SYS_DISTRO $SYS_DISTRO_OS"
+echo "Distro: $SYS_DISTRO $SYS_DISTRO_OS"
+echo "Dimensions: $SYS_DIMMS"
+echo "Desktop: $SYS_DE"
 echo "Kernel: $SYS_KERNEL"
 echo "CPU: $SYS_CPU @ $SYS_CPU_MHZ MHz"
+echo "Processors: $SYS_PRCSSRS"
+echo "Memory: $SYS_MEMORY_FREE / $SYS_MEMORY_AVAIL"
 echo " "
